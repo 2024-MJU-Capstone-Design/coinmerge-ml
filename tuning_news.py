@@ -24,8 +24,8 @@ def summarize_allnews(allnews):
     client_id = "jospmk76t8"
     client_secret = "6eKmYbwsitbJN08xmQgqbpiJEseuIvCz0v5UFZGJ"
     headers = {
-        "X-NCP-APIGW-API-KEY-ID": client_id,
-        "X-NCP-APIGW-API-KEY": client_secret,
+        "X-NCP-APIGW-API-KEY-ID": os.environ.get("CLOVA_CLIENT_ID"),
+        "X-NCP-APIGW-API-KEY": os.environ.get("CLOVA_CLIENT_SECRET"),
         "Content-Type": "application/json"
     }
     language = "ko"  # Language of document (ko, ja )
